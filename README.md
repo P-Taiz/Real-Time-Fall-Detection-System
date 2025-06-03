@@ -89,7 +89,7 @@ The system consists of the following components:
 5. [Telegram Bot API](https://core.telegram.org/bots/api)
 6. [OpenCV + MediaPipe Fall Detection](https://github.com/onenationonemind1/falling_detection)
 7. [YOLO-NAS Custom Object Detection – Code with Aarohi](https://youtu.be/pgf9bPuEsFo?si=MR7y7VPIFWNPCVbZ)
-8. [Ali Zara et al., *Human Fall Detection Using Pose Estimation with Transformers*](https://youtu.be/pgf9bPuEsFo?si=qPJoRV9-PTeJCn_I)
+8. [Ali Zara et al., *Human Fall Detection Using Pose Estimation with Transformers*](https://www.sciencedirect.com/science/article/pii/S0952197624019687)
 
 ---
 
