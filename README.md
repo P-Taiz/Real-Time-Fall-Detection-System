@@ -82,17 +82,14 @@ The system consists of the following components:
 
 ## 📚 References
 
-1. Salimi, M. et al., *Using Deep Neural Networks for Human Fall Detection Based on Pose Estimation*, Sensors, 2022.  
-   https://www.mdpi.com/1424-8220/22/12/4544#fig_body_display_sensors-22-04544-f001
+1. [Salimi, M. et al., *Using Deep Neural Networks for Human Fall Detection Based on Pose Estimation*, Sensors, 2022.](https://www.mdpi.com/1424-8220/22/12/4544#fig_body_display_sensors-22-04544-f001)
 2. [YOLO Documentation - Ultralytics](https://docs.ultralytics.com)
 3. [Google MediaPipe Documentation](https://ai.google.dev/edge/mediapipe/solutions)
-4. Yong Chen et al., *Vision-Based Fall Event Detection Using Attention Guided Bi-Directional LSTM*  
-   https://www.researchgate.net/publication/346894576_Vision-Based_Fall_Event_Detection_in_Complex_Background_Using_Attention_Guided_Bi-Directional_LSTM
+4. [Yong Chen et al., *Vision-Based Fall Event Detection Using Attention Guided Bi-Directional LSTM*](https://www.researchgate.net/publication/346894576_Vision-Based_Fall_Event_Detection_in_Complex_Background_Using_Attention_Guided_Bi-Directional_LSTM)
 5. [Telegram Bot API](https://core.telegram.org/bots/api)
 6. [OpenCV + MediaPipe Fall Detection](https://github.com/onenationonemind1/falling_detection)
 7. [YOLO-NAS Custom Object Detection – Code with Aarohi](https://youtu.be/pgf9bPuEsFo?si=MR7y7VPIFWNPCVbZ)
-8. Ali Zara et al., *Human Fall Detection Using Pose Estimation with Transformers*  
-   https://youtu.be/pgf9bPuEsFo?si=qPJoRV9-PTeJCn_I
+8. [Ali Zara et al., *Human Fall Detection Using Pose Estimation with Transformers*](https://youtu.be/pgf9bPuEsFo?si=qPJoRV9-PTeJCn_I)
 
 ---
 
