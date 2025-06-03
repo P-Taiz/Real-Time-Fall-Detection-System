@@ -1,0 +1,56 @@
+Telegram Bot Token 및 Chat ID 획득 방법
+
+이 문서는 프로젝트에서 Telegram을 통해 알림을 보내기 위해 필요한 Bot Token과 Chat ID를 얻는 방법을 설명합니다. 아래 단계를 따라 설정을 완료하세요.
+
+1. Telegram Bot 생성 및 Bot Token 획득
+- Telegram 앱을 열고 검색창에서 @BotFather를 검색합니다.
+- @BotFather를 선택하고 /start 명령어를 입력하여 대화를 시작합니다.
+- /newbot 명령어를 입력하여 새 봇을 만듭니다.
+- BotFather가 봇의 이름을 요청하면 원하는 이름을 입력하세요. 예: FallDetectorBot
+- 다음으로, 봇의 사용자 이름을 설정합니다. 사용자 이름은 @로 시작하고 _bot 또는 Bot으로 끝나야 합니다. 예: @FallDetectorBot
+- 봇 생성이 완료되면 BotFather가 Bot Token을 제공합니다. 예: 123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11
+- 이 Bot Token을 안전한 곳에 복사하여 저장하고, 절대 공개적으로 공유하지 마세요.
+
+2. Bot Token을 코드에 저장
+- 프로젝트 폴더에서 telegram_alert.py 파일을 엽니다.
+- BOT_TOKEN 변수가 있는 줄을 찾아 아래와 같이 Bot Token으로 교체합니다:
+  BOT_TOKEN = 'your_bot_token'  # 예: '123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11'
+
+3. Chat ID 획득
+방법 1: Telegram API 사용
+- 생성한 봇(예: @FallDetectorBot)을 알림을 받을 채팅(개인 또는 그룹)에 추가합니다.
+- 채팅에서 봇에게 임의의 메시지를 보냅니다. 예: Hello
+- 웹 브라우저에서 다음 URL을 입력하고 <YOUR_BOT_TOKEN>을 위에서 받은 Bot Token으로 바꿉니다:
+  https://api.telegram.org/bot<YOUR_BOT_TOKEN>/getUpdates
+  예: https://api.telegram.org/bot123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11/getUpdates
+- 응답 JSON 데이터에서 "chat":{"id":...} 부분을 찾습니다. 여기서 id 값이 Chat ID입니다.
+  - 개인 채팅: 양수 (예: 123456789)
+  - 그룹 채팅: 음수 (예: -123456789)
+
+방법 2: 외부 봇 사용
+- Telegram에서 @userinfobot 또는 @getidsbot을 검색하여 대화를 시작합니다.
+- /start 명령어를 입력하면 해당 봇이 채팅의 Chat ID를 반환합니다.
+- 반환된 Chat ID를 기록합니다.
+
+4. Chat ID를 코드에 저장
+- telegram_alert.py 파일을 열고 CHAT_ID 변수가 있는 줄을 찾아 아래와 같이 Chat ID로 교체합니다:
+  CHAT_ID = 'your_chat_id'  # 예: '123456789' 또는 '-123456789'
+
+5. Telegram Bot 설정 테스트
+- telegram_alert.py 파일에 BOT_TOKEN과 CHAT_ID가 올바르게 설정되었는지 확인합니다.
+- 다음 명령어를 실행하여 알림 전송을 테스트합니다:
+  python telegram_alert.py
+- Telegram 채팅에서 테스트 메시지가 수신되는지 확인합니다.
+
+6. 주의사항
+- Bot Token과 Chat ID는 외부에 노출되지 않도록 주의하세요. 공개 Git 리포지토리에 업로드하지 마세요.
+- 문제가 발생하면 Telegram Bot API 문서를 참고하세요: https://core.telegram.org/bots/api
+
+7. 문제 해결
+- 알림이 전송되지 않으면:
+  - Bot Token과 Chat ID가 정확한지 다시 확인하세요.
+  - 봇이 채팅에 추가되었는지, 차단되지 않았는지 확인하세요.
+  - 인터넷 연결 상태를 점검하세요.
+- Chat ID가 잘못된 경우:
+  - 그룹 채팅의 Chat ID는 음수일 수 있습니다(예: -123456789).
+  - @userinfobot 또는 @getidsbot을 사용하여 정확한 Chat ID를 확인하세요.

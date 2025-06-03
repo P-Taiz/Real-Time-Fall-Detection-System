@@ -1,0 +1,8 @@
+path: D:/Project/datasets
+train: D:/Project/datasets/images/train
+val: D:/Project/datasets/images/val
+test: 
+
+nc: 1
+
+names: ['person']
