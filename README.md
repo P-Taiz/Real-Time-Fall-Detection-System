@@ -60,7 +60,7 @@ The system consists of the following components:
    ```bash
    streamlit run app.py
    ```
-3. **Quick Launch (Windows)**
+3. **Quick Launch (Windows)**:
   If you are using Windows, you can quickly launch the application by simply double-clicking the file:
    ```bash
    run_app.bat
